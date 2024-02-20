@@ -1,0 +1,100 @@
+/* 共通部分 */
+html{
+  font-size: 100%;
+}
+
+body{
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  line-height: 1.7;
+  color: #432;
+}
+
+img{
+  max-width: 100%;
+}
+
+/* ヘッダー */
+.logo{
+  width: 30vw;
+  margin-top: 14px
+}
+
+.page-header{
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-nav{
+  display: flex;
+  justify-content: space-between;
+  font-size: 4vw;
+  text-transform: uppercase;
+  list-style: none;
+  color: white;
+  margin: 30px 30px 30px;
+}
+
+.main-nav li {
+  margin-right: 20px;
+}
+
+/* ホーム */
+
+.home-content{
+  text-align: center;
+  margin-top: 20%;
+  font-size: 4vw;
+  color: white;
+}
+
+.home-content p{
+  font-size: 3.5vw;
+  color: white;
+  margin: 10px 0 42px;
+}
+
+/* 大きな背景画像 */
+.big-bg{
+  background-size: cover;
+  background-position: center top;
+}
+
+#home{
+  background-image: url('/assets/sunset-8544672_1280.jpg');
+  min-height: 100vw;
+}
+
+#home .page-title{
+  text-transform: none;
+}
+
+/* タイル型 */
+.grid{
+  display: grid;
+  gap: 26px;
+  grid-template-columns: repeat(auto-fit,minmax(700px,1fr));
+  margin-top: 6%;
+  margin-bottom: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.item{
+  border: 1px solid lightgray
+}
+
+.item p{
+  font-size: 300%;
+  word-wrap: break-word;
+}
+
+h3{
+  text-align: center;
+  margin-top: 5%;
+  font-size: 4vw;
+}
+
+footer{
+  height: 500px;
+  background-color: black;
+}
