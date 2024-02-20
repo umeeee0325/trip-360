@@ -1,0 +1,53 @@
+<div id="home" class="big-bg">
+  <header class="page-header wrapper">
+    <h1><%= link_to image_tag("logo.png", class: "logo", alt: "Trip360°"), root_path %></h1>
+    <nav>
+      <ul class="main-nav">
+        <li><%= link_to 'ログイン', new_user_session_path %></li>
+        <li><%= link_to '新規登録', new_user_registration_path %></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="home-content wrapper">
+    <h2 class="page-title">Share your wonderful photos</h2>
+    <P>素敵な写真を共有しましょう</P>
+  </div>
+</div>
+
+<h3>最新投稿一覧</h3>
+
+<div class="grid wrapper">
+  <div class="item">
+    <P>ユーザー名</P>
+    <img src="<%= asset_path('view1.jpg') %>" alt="">
+    <p>写真キャプション</p>
+  </div>
+  <div class="item">
+    <P>ユーザー名</P>
+    <img src="<%= asset_path('view2.jpg') %>" alt="">
+    <p>写真キャプション</p>
+  </div>
+  <div class="item">
+    <P>ユーザー名</P>
+    <img src="<%= asset_path('view3.jpg') %>" alt="">
+    <p>写真キャプション</p>
+  </div>
+  <div class="item">
+    <P>ユーザー名</P>
+    <img src="<%= asset_path('view4.jpg') %>" alt="">
+    <p>写真キャプション</p>
+  </div>
+  <div class="item">
+    <P>ユーザー名</P>
+    <img src="<%= asset_path('view5.jpg') %>" alt="">
+    <p>写真キャプション</p>
+  </div>
+  <div class="item">
+    <P>ユーザー名</P>
+    <img src="<%= asset_path('view6.jpg') %>" alt="">
+    <p>写真キャプション</p>
+  </div>
+</div>
+<footer>
+</footer>
