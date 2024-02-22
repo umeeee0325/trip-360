@@ -8,6 +8,9 @@
     <div class="contents">
       <div class="container">
         <%= form_with(model: @tweet, local: true, class: "my-form-class") do |f| %>
+
+        <%= render 'shared/error_messages', model: f.object %>
+
           <div class="img-upload">
             <div class="weight-bold-text">
             商品画像

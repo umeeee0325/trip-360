@@ -9,14 +9,18 @@ class TweetsController < ApplicationController
   end
 
   def create
-    Tweet.create(tweet_params)
-    redirect_to '/'
+    @tweet = Tweet.new(tweet_params)
+    if @tweet.save
+      redirect_to root_path
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   private
 
   def tweet_params
-    params.require(:tweet).permit(:residence_id, :title, :text, :city, :spot, :shooting_day)
+    params.require(:tweet).permit(:residence_id, :title, :text, :city, :spot, :shooting_day, :image)
   end
 end
 
