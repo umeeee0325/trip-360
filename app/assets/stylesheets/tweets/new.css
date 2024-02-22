@@ -5,24 +5,24 @@
 
 .contents-row{
   display: flex;
-  justify-content: center; /* 横方向の中央揃え */
+  justify-content: center; 
 }
 
 .container{
   display: flex;
-  justify-content: center; /* 横方向の中央揃え */
-  align-items: center; /* 縦方向の中央揃え */
-  height: 1300px; /* 画面の高さいっぱいに要素を表示 */
+  justify-content: center;
+  align-items: center; 
+  height: 1400px;
   width: 80vw;
   background-color: #dddddd;
 }
 
 .post-heading {
-  text-align: center; /* テキストを中央に配置 */
+  text-align: center; 
 }
 
 .my-form-class{
-  width: 80%; /* フォームの幅を適切なサイズに調整 */
+  width: 80%;
   height: 80%;
   font-size: 1.5rem;
   display: flex;
@@ -35,7 +35,8 @@
   background-color: white;
   border: 1px solid #dddddd;
   padding: 20px;
-  margin: 10px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .send-class{
@@ -45,4 +46,12 @@
   text-align: center;
   background-color: #888888;
 
+}
+
+.indispensable{
+  color: red;
+}
+
+.weight-bold-text p{
+  margin-top: 20px;
 }
