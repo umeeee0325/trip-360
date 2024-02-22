@@ -1,0 +1,45 @@
+<div class="new-post">
+  <header class="new-header">
+    <h1><%= link_to image_tag("logo.png", class: "logo-new", alt: "Trip360°"), root_path %></h1>
+    <h3 class="post-heading">投稿する</h3>
+  </header>
+
+  <div class="contents-row">
+    <div class="contents">
+      <div class="container">
+        <%= form_with(model: @tweet, local: true, class: "my-form-class") do |form| %>
+          時期
+          <%= form.date_field :shooting_day, placeholder: "Image Url", class: "form-class"%>
+          場所 ※必須
+          <%= form.text_field :residence_id, placeholder: "都道府県を選択", class: "form-class"%>
+          場所
+          <%= form.text_field :city, placeholder: "市町村を入力", class: "form-class"%>
+          スポット名
+          <%= form.text_field :spot, placeholder: "スポット名を入力", class: "form-class"%>
+          タイトル ※必須
+          <%= form.text_field :title, placeholder: "タイトルを入力", rows: "10",class: "form-class" %>
+          コメント ※必須
+          <%= form.text_area :text, placeholder: "体験や感想、おススメな点など", class: "form-class" %>
+          <%= form.submit "投稿する", class: "send-class" %>
+        <% end %>
+      </div>
+    <div>
+  <div>
+  <footer>
+  </footer>
+</div>
+
+<%# 商品画像 %>
+    <%# <div class="img-upload">
+      <div class="weight-bold-text">
+        商品画像
+        <span class="indispensable">必須</span>
+      </div>
+      <div class="click-upload">
+        <p>
+          クリックしてファイルをアップロード
+        </p>
+        <%= f.file_field :image, id:"item-image" %>
+      <%# </div>
+    </div> %> 
+    <%# /商品画像 %>

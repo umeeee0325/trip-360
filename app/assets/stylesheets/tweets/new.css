@@ -1,0 +1,48 @@
+.logo-new{
+  width: 20vh;
+  height: auto;
+}
+
+.contents-row{
+  display: flex;
+  justify-content: center; /* 横方向の中央揃え */
+}
+
+.container{
+  display: flex;
+  justify-content: center; /* 横方向の中央揃え */
+  align-items: center; /* 縦方向の中央揃え */
+  height: 1300px; /* 画面の高さいっぱいに要素を表示 */
+  width: 80vw;
+  background-color: #dddddd;
+}
+
+.post-heading {
+  text-align: center; /* テキストを中央に配置 */
+}
+
+.my-form-class{
+  width: 80%; /* フォームの幅を適切なサイズに調整 */
+  height: 80%;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #dddddd;
+  margin: 10px
+}
+
+.form-class{
+  background-color: white;
+  border: 1px solid #dddddd;
+  padding: 20px;
+  margin: 10px;
+}
+
+.send-class{
+  margin-top: 40px;
+  border: 1px outset #888888;
+  padding: 10px;
+  text-align: center;
+  background-color: #888888;
+
+}
