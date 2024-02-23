@@ -1,0 +1,57 @@
+.logo-new{
+  width: 20vh;
+  height: auto;
+}
+
+.contents-row{
+  display: flex;
+  justify-content: center; 
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  height: 1700px;
+  width: 80vw;
+  background-color: #dddddd;
+}
+
+.post-heading {
+  text-align: center; 
+}
+
+.my-form-class{
+  width: 80%;
+  height: 80%;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #dddddd;
+  margin: 10px
+}
+
+.form-class{
+  background-color: white;
+  border: 1px solid #dddddd;
+  padding: 20px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.send-class{
+  margin-top: 40px;
+  border: 1px outset #888888;
+  padding: 10px;
+  text-align: center;
+  background-color: #888888;
+
+}
+
+.indispensable{
+  color: red;
+}
+
+.weight-bold-text p{
+  margin-top: 20px;
+}
