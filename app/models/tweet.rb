@@ -5,6 +5,8 @@ class Tweet < ApplicationRecord
   validates :title, presence: true
   validates :text, presence: true
   validates :image, presence: true
+  validates :residence_id, numericality: { other_than: 1 }
 
-  belongs_to :user 
+  belongs_to :user
+  
 end
