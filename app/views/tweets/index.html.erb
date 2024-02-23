@@ -18,37 +18,25 @@
 
 <h3>最新投稿一覧</h3>
 
-<div class="grid wrapper">
-  <div class="item">
-    <P>ユーザー名</P>
-    <img src="<%= asset_path('view1.jpg') %>" alt="">
-    <p>写真キャプション</p>
-  </div>
-  <div class="item">
-    <P>ユーザー名</P>
-    <img src="<%= asset_path('view2.jpg') %>" alt="">
-    <p>写真キャプション</p>
-  </div>
-  <div class="item">
-    <P>ユーザー名</P>
-    <img src="<%= asset_path('view3.jpg') %>" alt="">
-    <p>写真キャプション</p>
-  </div>
-  <div class="item">
-    <P>ユーザー名</P>
-    <img src="<%= asset_path('view4.jpg') %>" alt="">
-    <p>写真キャプション</p>
-  </div>
-  <div class="item">
-    <P>ユーザー名</P>
-    <img src="<%= asset_path('view5.jpg') %>" alt="">
-    <p>写真キャプション</p>
-  </div>
-  <div class="item">
-    <P>ユーザー名</P>
-    <img src="<%= asset_path('view6.jpg') %>" alt="">
-    <p>写真キャプション</p>
-  </div>
-</div>
+<div class="grid">
+  <ul class='tweet-list'>
+    <% @tweets.each do |tweet| %>
+    <li class="tweet-item">
+      <div class="tweet-name">
+        <%# <%= link_to item_path(item.id) do %>
+        <p class='tweet-user'>ユーザー名
+                          <%# <%= tweet.name %>
+        </p>
+      </div>
+      <div class="tweet-image">
+        <%= image_tag tweet.image.variant(resize: '600x300') if tweet.image.attached? %>
+      </div>
+      <div class="tweet-title">
+        <p><%= tweet.title %></p>
+      </div>
+    </li>
+    <% end %>
+  </ul>
+<div>
 <footer>
 </footer>

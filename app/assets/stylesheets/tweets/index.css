@@ -70,23 +70,38 @@ img{
 }
 
 /* タイル型 */
-.grid{
-  display: grid;
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   gap: 26px;
-  grid-template-columns: repeat(auto-fit,minmax(700px,1fr));
   margin-top: 6%;
   margin-bottom: 50px;
   margin-left: 50px;
   margin-right: 50px;
 }
 
-.item{
-  border: 1px solid lightgray
+.tweet-list {
+  width: 100%;
+  display: grid;
+  grid-gap: 26px;
+  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+  margin-top: 6%;
+  margin-bottom: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
-.item p{
-  font-size: 300%;
-  word-wrap: break-word;
+.tweet-item {
+  flex-basis: calc(50% - 13px); /* グリッド要素の幅を50%に設定 */
+  margin-bottom: 26px;
+  list-style: none;
+}
+
+.tweet-name,
+.tweet-image,
+.tweet-title {
+  width: 100%;
 }
 
 h3{
