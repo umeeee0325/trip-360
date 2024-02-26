@@ -1,0 +1,35 @@
+<div class="new-post">
+  <header class="new-header">
+    <h1><%= link_to image_tag("logo.png", class: "logo-new", alt: "Trip360°"), root_path %></h1>
+    <h3 class="post-heading">ログイン画面</h3>
+  </header>
+
+  <div class="contents-user">
+    <div class="container-user">
+      <%= form_with model: @user, url: user_session_path, id: 'new_user', class: 'new_user', local: true do |f| %>
+      <%= render "devise/shared/error_messages", resource: resource %>
+      <div class="field">
+        <%= f.label :"メールアドレス", class: "user-label" %><br />
+        <%= f.email_field :email, class:"input-default", autofocus: true %>
+      </div>
+
+      <div class="field">
+        <%= f.label :"パスワード", class: "user-label" %><br />
+        <%= f.password_field :password, class:"input-default", autocomplete: "off" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :"パスワード再入力", class: "user-label" %><br />
+        <%= f.password_field :password, class:"input-default", autocomplete: "off" %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit "ログイン" %>
+      </div>
+      <% end %>
+    </div>
+  </div>
+  <footer>
+  </footer>
+</div>
+
