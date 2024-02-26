@@ -7,7 +7,7 @@ class User < ApplicationRecord
   belongs_to :age
   belongs_to :residence
   
-  has_many :items
+  has_many :tweets
 
   validates :nickname, :profile, presence: true
   validates :gender_id, :residence_id, :age_id, numericality: { other_than: 1 , message: "can't be blank"} 

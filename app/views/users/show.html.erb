@@ -1,0 +1,57 @@
+<div class="show-user">
+  <header class="new-header">
+    <h1><%= link_to image_tag("logo.png", class: "logo-new", alt: "Trip360°"), root_path %></h1>
+  </header>
+
+  <div class="show-profile">
+    <p class="user-nickname"><%= @user.nickname %></p>
+    <div class="user-show-field">
+      <div class="user-show-label">
+      <%= @user.profile %>
+      </div>
+      <div class="user-show-label">
+      <%= @user.residence.name %>
+      </div>
+      <div class="user-show-label">
+      <%= @user.gender.name %>(<%= @user.age.name %>)
+      </div>
+      <div class="user-edit-link">
+      <%= link_to '編集する', "#", class: "show" %>
+      <div>
+    </div>
+  </div>
+
+  <div class="show-contents">
+    <p class="user-nickname-index"><%= @user.nickname %>さんの投稿一覧</p>
+    <% @tweets.each do |tweet| %>
+    <div class="user-show">
+      <div class="user-show-line"></div>
+      <div class="user-show-title">
+        <p style="word-wrap: break-word;"><%= tweet.title %></p>
+      </div>
+      <div class="user-show-image">
+      <%= image_tag tweet.image.variant(resize: '600x300'), class: "full-width" if tweet.image.attached? %>
+      </div>
+      <div class="user-show-day">
+        <p><%= tweet.shooting_day %></p>
+      </div>
+      <div class="user-show-text">
+        <p style="word-wrap: break-word;"><%= tweet.text %></p>
+      </div>
+      <div class="user-show-residence">
+        <p>場所:<%= tweet.residence.name %><%= tweet.city %> </p>
+      </div>
+      <div class="user-show-residence">
+        <p>スポット名：<%= tweet.spot %> </p>
+      </div>
+      <div class="edit-link">
+        <%= link_to "編集する", "#", class: "edit-show" %>
+      </div>
+    <% end %>
+  </div>
+</div>
+<footer>
+</footer>
+
+<%# edit_tweet_path(tweet) %>
+
