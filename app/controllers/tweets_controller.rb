@@ -24,7 +24,8 @@ class TweetsController < ApplicationController
   private
 
   def tweet_params
-    params.require(:tweet).permit(:residence_id, :title, :text, :city, :spot, :shooting_day, :image)
+    params.require(:tweet).permit(:residence_id, :title, :text, :city, :spot, :shooting_day, :image).merge(user_id: current_user.id)
+
   end
 
   def move_to_index
@@ -33,6 +34,4 @@ class TweetsController < ApplicationController
     end
   end
 end
-
-# .merge(user_id: current_user.id)
 

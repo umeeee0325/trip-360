@@ -29,7 +29,7 @@
           </div>
           <div class="weight-bold-text">
           <p>場所 <span class="indispensable">※必須</span></p>
-          <%= f.text_field :residence_id, placeholder: "都道府県を選択", class: "form-class"%>
+          <%= f.collection_select(:residence_id, Residence.all, :id, :name, {}, {class:"form-class", id:"item-category"}) %>
           </div>
           <div class="weight-bold-text">
           <p>場所</p>
