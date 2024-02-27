@@ -15,9 +15,13 @@
       <div class="user-show-label">
       <%= @user.gender.name %>(<%= @user.age.name %>)
       </div>
+      <% if current_user == @user %>
       <div class="user-edit-link">
-      <%= link_to '編集する', "#", class: "show" %>
+        <%= link_to '編集する', "#", class: "show" %>
+      <% else %>
+      <div class="user-edit-link-2">
       <div>
+      <% end %>
     </div>
   </div>
 
@@ -44,8 +48,11 @@
       <div class="user-show-residence">
         <p>スポット名：<%= tweet.spot %> </p>
       </div>
-      <div class="edit-link">
-        <%= link_to "編集する", "#", class: "edit-show" %>
+      <% if current_user == tweet.user %>
+        <div class="edit-link">
+          <%= link_to "編集する", "#", class: "edit-show" %>
+        </div>
+      <% end %>
       </div>
     <% end %>
   </div>

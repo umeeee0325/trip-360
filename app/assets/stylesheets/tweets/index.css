@@ -121,6 +121,18 @@ img{
   width: 100%;
 }
 
+.tweet-name a {
+  text-decoration: none; /* 下線を消す */
+  color: black; /* ニックネームを黒色にする */
+}
+
+.welcome{
+  text-align: end;
+  margin-right: 5%;
+  margin-top: 5%;
+  font-size: 4vw;
+}
+
 h3{
   text-align: center;
   margin-top: 5%;
