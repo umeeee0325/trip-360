@@ -1,0 +1,97 @@
+.show-profile{
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column; 
+}
+
+.user-nickname {
+  display: block;
+  text-align: center;
+  font-size: 8vw; 
+  margin-bottom: 20px; 
+}
+
+.user-show-field{
+  display: flex;
+  flex-direction: column;
+}
+
+.user-show-label{
+  margin-bottom: 10px;
+  margin-left: 20vw;
+  font-size: 3vw;
+}
+
+.user-edit-link{
+  text-align: end;
+  margin-right: 5vw;
+  font-size: 3vw;
+}
+
+.show{
+  text-decoration: none;
+  border: 1px solid black;
+  background-color: aquamarine;
+  padding: 1vw 2vw;
+  color: black;
+}
+
+.show-contents{
+  margin-top: 30vh;
+}
+
+.user-nickname-index{
+  font-size: 5vw;
+  display: block;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.user-show-title{
+  margin-top: 6vh;
+  font-size: 2.5vw;
+}
+
+.user-show-image img {
+  width: 100%; 
+  height: auto; 
+}
+
+.user-show-day{
+  text-align: end;
+  margin-right: 20px;
+}
+
+.user-show-text{
+  font-size: 2.5vw;
+  margin-bottom: 3vh;
+  text-decoration: underline;
+}
+
+.user-show-residence{
+  font-size: 1.75vw;
+}
+
+.user-show-day{
+  font-size: 1.75vw;
+}
+
+.edit-link{
+  text-align: end;
+  margin-right: 5vw;
+  font-size: 1.75vw;
+  margin-bottom: 6vh;
+}
+
+.edit-show{
+  text-decoration: none;
+  border: 1px solid black;
+  background-color: aquamarine;
+  padding: 1vw 2vw;
+  color: black;
+}
+
+.user-show-line{
+  border-bottom: 1px dotted gray;
+}

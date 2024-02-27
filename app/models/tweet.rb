@@ -1,6 +1,9 @@
 class Tweet < ApplicationRecord
   has_one_attached :image
 
+  extend ActiveHash::Associations::ActiveRecordExtensions
+  belongs_to :residence
+
   validates :residence_id, presence: true
   validates :title, presence: true
   validates :text, presence: true
