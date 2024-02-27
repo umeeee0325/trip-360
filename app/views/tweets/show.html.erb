@@ -27,7 +27,7 @@
       <% if current_user == @tweet.user %>
       <div class="edit-link">
         <%= link_to "編集する", edit_tweet_path(@tweet), class: "edit-show" %>
-        <%= link_to "削除する", edit_tweet_path(@tweet), class: "edit-show" %>
+        <%= link_to "削除する", "/tweets/#{@tweet.id}", data: { turbo_method: :delete }, class: "edit-show" %>
       </div>
       <% end %>
     </div>
