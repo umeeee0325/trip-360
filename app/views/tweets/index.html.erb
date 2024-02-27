@@ -34,7 +34,9 @@
         <%= link_to tweet.user.nickname, user_path(tweet.user) %>
       </div>
       <div class="tweet-image">
-        <%= image_tag tweet.image.variant(resize: '600x300') if tweet.image.attached? %>
+        <%= link_to tweet_path(tweet) do %>
+          <%= image_tag tweet.image.variant(resize: '600x300') if tweet.image.attached? %>
+        <% end %>
       </div>
       <div class="tweet-title">
         <p><%= tweet.title %></p>
