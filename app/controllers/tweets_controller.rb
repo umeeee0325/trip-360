@@ -1,5 +1,6 @@
 class TweetsController < ApplicationController
-  before_action :move_to_index, except: [:index, :show, :edit]
+  before_action :move_to_index, except: [:index, :edit]
+  before_action :set_tweet, only: [:edit, :show, :update]
 
   def index
     @tweets = Tweet.all
@@ -19,14 +20,12 @@ class TweetsController < ApplicationController
   end
 
   def edit
-    @tweet = Tweet.find(params[:id])
     unless current_user == @tweet.user
       redirect_to root_path
     end
   end
 
   def update
-    @tweet = Tweet.find(params[:id])
     if @tweet.update(tweet_params)
       redirect_to root_path
     else
@@ -48,6 +47,10 @@ class TweetsController < ApplicationController
     unless user_signed_in?
       redirect_to root_path
     end
+  end
+
+  def set_tweet
+    @tweet = Tweet.find(params[:id])
   end
 end
 

@@ -1,0 +1,37 @@
+<div class="new-post">
+  <header class="new-header">
+    <h1><%= link_to image_tag("logo.png", class: "logo-new", alt: "Trip360°"), root_path %></h1>
+    <h3 class="post-heading">投稿詳細</h3>
+  </header>
+  
+  <div class="itemshows-contents">
+    <div class="itemshow-contents">
+      <div class="user-show-title">
+        <p style="word-wrap: break-word;"><%= @tweet.title %></p>
+      </div>
+      <div class="user-show-image">
+        <%= image_tag @tweet.image.variant(resize: '600x300'), class: "full-width" if @tweet.image.attached? %>
+      </div>
+      <div class="user-show-day">
+        <p><%= @tweet.shooting_day %></p>
+      </div>
+      <div class="user-show-text">
+        <p style="word-wrap: break-word;"><%= @tweet.text %></p>
+      </div>
+      <div class="user-show-residence">
+        <p>場所:<%= @tweet.residence.name %><%= @tweet.city %> </p>
+      </div>
+      <div class="user-show-residence">
+        <p>スポット名：<%= @tweet.spot %> </p>
+      </div>
+      <% if current_user == @tweet.user %>
+      <div class="edit-link">
+        <%= link_to "編集する", edit_tweet_path(@tweet), class: "edit-show" %>
+        <%= link_to "削除する", edit_tweet_path(@tweet), class: "edit-show" %>
+      </div>
+      <% end %>
+    </div>
+  </div>
+  <footer>
+  </footer>
+<div>
