@@ -1,0 +1,11 @@
+.itemshow-contents{
+  margin-top: 5vh;
+  width: 80%;
+}
+
+.itemshows-contents{
+  display: flex;
+  justify-content: center;
+}
+
+
