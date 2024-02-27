@@ -15,7 +15,7 @@
       <div class="user-show-label">
       <%= @user.gender.name %>(<%= @user.age.name %>)
       </div>
-      <% if current_user == @user %>
+      <% if user_signed_in? && current_user.id == @user.id %>
       <div class="user-edit-link">
         <%= link_to '編集する', edit_user_registration_path, class: "show" %>
       <% else %>
@@ -48,7 +48,7 @@
       <div class="user-show-residence">
         <p>スポット名：<%= tweet.spot %> </p>
       </div>
-      <% if current_user == tweet.user %>
+      <% if user_signed_in? && current_user.id == tweet.user_id %>
         <div class="edit-link">
           <%= link_to "編集する", edit_tweet_path(tweet), class: "edit-show" %>
           <%= link_to '削除する', "/tweets/#{tweet.id}", data: { turbo_method: :delete }, class: "show" %>
@@ -60,6 +60,5 @@
 </div>
 <footer>
 </footer>
-
 
 
