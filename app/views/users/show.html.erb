@@ -17,7 +17,7 @@
       </div>
       <% if current_user == @user %>
       <div class="user-edit-link">
-        <%= link_to '編集する', "#", class: "show" %>
+        <%= link_to '編集する', edit_user_registration_path, class: "show" %>
       <% else %>
       <div class="user-edit-link-2">
       <div>
