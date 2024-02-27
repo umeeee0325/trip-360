@@ -11,5 +11,5 @@ class Tweet < ApplicationRecord
   validates :residence_id, numericality: { other_than: 1 }
 
   belongs_to :user
-  
+  has_many :comments 
 end
