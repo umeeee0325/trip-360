@@ -50,7 +50,7 @@
       </div>
       <% if current_user == tweet.user %>
         <div class="edit-link">
-          <%= link_to "編集する", "#", class: "edit-show" %>
+          <%= link_to "編集する", edit_tweet_path(tweet), class: "edit-show" %>
         </div>
       <% end %>
       </div>
@@ -60,5 +60,5 @@
 <footer>
 </footer>
 
-<%# edit_tweet_path(tweet) %>
+
 
