@@ -20,7 +20,7 @@
         <%= link_to '編集する', edit_user_registration_path, class: "show" %>
       <% else %>
       <div class="user-edit-link-2">
-      <div>
+      </div>
       <% end %>
     </div>
   </div>
@@ -34,7 +34,9 @@
         <p style="word-wrap: break-word;"><%= tweet.title %></p>
       </div>
       <div class="user-show-image">
-      <%= image_tag tweet.image.variant(resize: '600x300'), class: "full-width" if tweet.image.attached? %>
+        <%= link_to tweet_path(tweet) do %>
+        <%= image_tag tweet.image.variant(resize: '600x300'), class: "full-width" if tweet.image.attached? %>
+        <% end %>
       </div>
       <div class="user-show-day">
         <p><%= tweet.shooting_day %></p>
@@ -54,11 +56,8 @@
           <%= link_to '削除する', "/tweets/#{tweet.id}", data: { turbo_method: :delete }, class: "show" %>
         </div>
       <% end %>
-      </div>
     <% end %>
   </div>
 </div>
 <footer>
 </footer>
-
-

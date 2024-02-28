@@ -1,5 +1,5 @@
 class TweetsController < ApplicationController
-  before_action :move_to_index, except: [:index, :edit]
+  before_action :move_to_index, except: [:index, :edit, :show]
   before_action :set_tweet, only: [:edit, :show, :update, :destroy]
 
   def index
@@ -34,6 +34,8 @@ class TweetsController < ApplicationController
   end
 
   def show
+    @comment = Comment.new
+    @comments = @tweet.comments.includes(:user)
   end
 
   def destroy
@@ -49,9 +51,7 @@ class TweetsController < ApplicationController
   end
 
   def move_to_index
-    unless user_signed_in?
-      redirect_to root_path
-    end
+    redirect_to root_path unless user_signed_in?
   end
 
   def set_tweet
