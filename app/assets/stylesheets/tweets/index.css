@@ -78,7 +78,7 @@ img{
 }
 
 #home{
-  background-image: image_url('/assets/sunset-8544672_1280.jpg');
+  background-image: image_url('sunset-8544672_1280.jpg');
   min-height: 100vw;
 }
 
