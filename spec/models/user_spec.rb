@@ -69,6 +69,21 @@ RSpec.describe User, type: :model do
         @user.valid?
         expect(@user.errors.full_messages).to include("Password is too long (maximum is 128 characters)")
       end
+      it 'residence_idが1以下では投稿できない' do
+        @user.residence_id = 1
+        @user.valid?
+        expect(@user.errors.full_messages).to include("Residence can't be blank")
+      end
+      it 'gender_idが1以下では投稿できない' do
+        @user.gender_id = 1
+        @user.valid?
+        expect(@user.errors.full_messages).to include("Gender can't be blank")
+      end
+      it 'age_idが1以下では投稿できない' do
+        @user.age_id = 1
+        @user.valid?
+        expect(@user.errors.full_messages).to include("Age can't be blank")
+      end
     end
   end
 end
