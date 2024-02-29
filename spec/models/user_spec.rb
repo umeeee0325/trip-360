@@ -10,7 +10,8 @@ RSpec.describe User, type: :model do
       it 'nicknameとemail、passwordとpassword_confirmation、profileが存在し、gender_id、residence_id、age_idが2以上だと登録できる' do
         expect(@user).to be_valid
       end
-      context '新規登録できないとき' do
+    end
+    context '新規登録できないとき' do
       it 'nicknameが空では登録できない' do
         @user.nickname = ''
         @user.valid?
