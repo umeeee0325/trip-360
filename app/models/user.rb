@@ -13,7 +13,7 @@ class User < ApplicationRecord
   validates :nickname, presence: true, length: { maximum: 8 }
   validates :profile, presence: true, length: { maximum: 15 }
   validates :gender_id, :residence_id, :age_id, numericality: { other_than: 1 , message: "can't be blank"} 
-  validates :password, presence: true, length: { minimum: 6 }, format: { with: /\A[a-zA-Z0-9]+\z/, message: "は半角英数字で入力してください" }
-  validates :password_confirmation, presence: true, on: :create
+  validates :password, length: { minimum: 6 }, format: { with: /\A[a-zA-Z0-9]+\z/, message: "は半角英数字で入力してください" }, on: :create
+  validates :password, presence: true, on: :create
 end
 
