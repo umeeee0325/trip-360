@@ -1,51 +1,67 @@
 # README
 
-## usersテーブル
+## アプリケーション名
+Trip-360°
 
-| Column             | Type    | Options    |
-| ------------------ | ------- | ---------- |
-| nickname           | string  | null:false |
-| email              | string  | null:false |
-| encrypted_password | string  | null:false |
-| profile            | text    | null:false |
-| gender_id          | integer | null:false |
-| residence_id       | integer | null:false |
-| age_id             | integer | null:false |
+## アプリケーション概要
+シェアされた写真を見ることができ、場所やコメント投稿でおすすめの場所を共有していくことができる
 
-### Association
+## URL
+https://trip-360.onrender.com
 
-- has_many :tweets
-- has_many :comments
+## テスト用アカウント
+・Basic認証ID：admin
+・Basic認証パスワード：2222
+・メールアドレス：aaa@aa.com
+・パスワード：test1111
+
+## 利用方法
+### 投稿
+1.トップページのヘッダーからユーザー新規登録を行う
+2.投稿するボタンから、投稿内容（画像・時期・場所・場所（市町村）・スポット名・タイトル・コメント）を入力し投稿する
+
+### コメントする
+1.一覧ページから投稿写真をクリックし、投稿写真の詳細を確認する
+2.コメントしたい場合はコメント投稿フォームからコメントを送る
+
+## アプリケーションを作成した背景
+私は旅行に行って写真を取ることがすきだが、最近は目的地が決まらないという課題がある。課題を分析した結果、目的地はgoogleで「九州絶景」等と検索して決めているが、その探し方だと有名な所が検索結果としてでて既に行ったことがあるところが多い、また検索結果の写真が多くお気に入りの場所を探せないということが要因だと考えた。同様の問題を抱えている方も多いと思い、写真を共有しお気に入りの写真を探すアプリケーションを開発することにした。
+
+## 洗い出した要件
+https://docs.google.com/spreadsheets/d/1-vJPthGsq5Ml9QBRVgPR_KK0j9xD5VrQzpBqgHSVoYM/edit#gid=1930284529
+
+## 実装した機能についての画像やGIFおよびその説明
+トップページ
+https://gyazo.com/ea6a0258f6077fbafe23045cb1d1a87c
+
+新規登録画面
+https://gyazo.com/fc04fd0273071bce6078ad9705ea2d87
+
+投稿画面
+https://gyazo.com/48c025feef3f3dee7ba6d1d272c3e538
+
+コメント投稿画面
+https://gyazo.com/c0045f5fb6b21f3940e413896a0cef2f
+
+## 実装予定の機能
+フォロー・フォロワー・お気に入り機能を実装予定
+
+## データベース設計
+https://gyazo.com/956e542bbeb49d0eec0e6dd0ad8867ef
+
+## 画面遷移図
+https://gyazo.com/d1cbd2bfd58af1c6dbde5c3d8963483e
+
+## 開発環境
+・フロントエンド
+・バックエンド
+・モデルテスト
+・テキストエディタ
+
+## 工夫したポイント
+if文を使用し、ログインしているかしていないかで表示画面と処理を分けることで、表示中のボタンを少なくした。
 
 
-## tweetsテーブル
-
-| Column       | Type       | Options                       |
-| ------------ | ---------- | ----------------------------- |
-| residence_id | integer    | null:false                    |
-| city         | string     |                               |
-| spot         | string     |                               |
-| shooting_day | date       |                               |
-| title        | text       | null:false                    |
-| text         | text       | null:false                    |
-| user_id      | references | null:false, foreign_key: true |
-
-### Association
-
-- belongs_to :user
-- has_many :comments
 
 
-## commentsテーブル
-
-| Column   | Type       | Options                       |
-| -------- | ---------- | ----------------------------- |
-| text     | text       | null:false                    |
-| user_id  | references | null:false, foreign_key: true |
-| tweet_id | references | null:false, foreign_key: true |
-
-### Association
-
-- belongs_to :user
-- belongs_to :tweet
 
