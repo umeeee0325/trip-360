@@ -49,7 +49,7 @@ https://gyazo.com/c0045f5fb6b21f3940e413896a0cef2f
 フォロー・フォロワー・お気に入り機能を実装予定
 
 ## データベース設計
-https://gyazo.com/956e542bbeb49d0eec0e6dd0ad8867ef
+https://gyazo.com/152a7399164e604df9d794f65ad1d02d
 
 ## 画面遷移図
 https://gyazo.com/d1cbd2bfd58af1c6dbde5c3d8963483e
