@@ -65,20 +65,23 @@ https://gyazo.com/d1cbd2bfd58af1c6dbde5c3d8963483e
 
 ・html/css
 
-  
+<br>
+</br>
 
 バックエンド
 
 ・Ruby on rails
 
-  
+<br>
+</br>
 
 インフラ
 
 ・Render
 
-  
-  
+<br>
+</br>
+
 ・モデルテスト
 
 ## 工夫したポイント
